@@ -1,8 +1,5 @@
-/*const glossary_terms = 
-[
-    { jp: "コード", en: "code" },
-    { jp: }
-];*/
+var glossaryTerms = null;
+var curTable = null;
 
 const toggleLoad = () => {
     const loader = $('.loader');
@@ -10,30 +7,99 @@ const toggleLoad = () => {
     if (loader.length) {
         loader.remove();
     } else {
-        $('.glossary-entries').add('div').addClass('loader');
+        $('.glossary-entries').append('<div class="loader"></div>');
     }
 }
 
-const addEntry = (entry) => {
+const createTable = () => {
+    if (curTable !== null) {
+        return curTable;
+    }
 
+    let table = $('<table>');
+    let thead = $('<thead>');
+    let tbody = $('<tbody>');
+    let headRow = $('<tr>');
+    let headOne = $('<td>').text('日本語');
+    let headTwo = $('<td>').text('英語');
+
+    headRow.append(headOne);
+    headRow.append(headTwo);
+
+    thead.append(headRow);
+    table.append(thead);
+    table.append(tbody);
+
+    $('.glossary-entries').append(table);
+
+    return table;
+}
+
+const addEntry = (tbody, entry) => {
+    console.log("Add entry: " + entry);
+
+    let row = $('<tr>');
+    let jp = $('<td>').text(entry.jp);
+    let en = $('<td>').text(entry.en);
+    
+    row.append(jp, en);
+
+    tbody.append(row);
 }
 
 const loadGlossary = (json) => {
-    console.log("Loading glossary title: " + json.glossary.title);
-
-    for (let i in json.glossary.entries) {
-        addEntry(json.glossary.entries[i]);
+    if (json != null) {
+        glossaryTerms = json.glossary.entries;
     }
 
-    //toggleLoad();
+    curTable = createTable();
+
+    let tbody = curTable.find('tbody');
+
+    for (let i in glossaryTerms) {
+        addEntry(tbody, glossaryTerms[i]);
+    }
+
+    toggleLoad();
 
 }
 
+const search = (table, glossTerms, searchTerm) => {
+    if (table === null) {
+        return;
+    }
+
+    let newBody = $('<tbody>');
+
+    for (let i in glossTerms) {
+        if (!(glossTerms[i].jp.includes(searchTerm) || glossTerms[i].en.includes(searchTerm)) && searchTerm != '') {
+            continue;
+        }
+
+        addEntry(newBody, glossTerms[i]);
+    }
+
+    table.find('tbody').remove();
+    table.append(newBody);
+}
+
 $(document).ready(function(){
-    //toggleLoad();
+    toggleLoad();
     fetch("../data/glossary.json")
     .then(response => response.json())
     .then(json => loadGlossary(json));
+
+    const searchEvent = () => {
+        search(curTable, glossaryTerms, $('#searchBar').val());
+    }
+
+    $('#searchButton').on('click', searchEvent);
+
+    $('#searchBar').on('keydown', (e) => {
+        if (e.key === 'Enter') {
+            searchEvent();
+        }
+    });
 });
 
 

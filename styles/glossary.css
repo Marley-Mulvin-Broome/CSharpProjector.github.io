@@ -1,3 +1,4 @@
+
 h2 {
     margin-bottom: 0;
     border-bottom: solid 1px var(--main-white);
@@ -33,9 +34,7 @@ fieldset {
     border: none;
 }
 
-#searchBar:focus {
-    outline: none;
-}
+
 
 #searchBar {
     width: 60%;
@@ -47,9 +46,11 @@ fieldset {
 
 }
 
-#searchBar::selection {
-    background: hsl(270, 100%, 70%);
+.search-section input:focus {
+    outline: solid 2px lightblue;
 }
+
+
 
 #searchButton {
     width: 20%;
@@ -65,16 +66,34 @@ fieldset {
 table {
     width: 100%;
     height: 100%;
+
+    text-align: justify;
 }
 
 table, tr, tbody, thead, td {
-    padding: 0;
+    padding: none;
+    margin: none;
+    border-spacing: 0px;
+}
+
+thead td {
+    border-bottom: solid 1px #FFF;
 }
 
 table tr td {
     width: 50%;
 }
 
+table tbody tr td {
+    font-size: 1.3rem;
+}
+
 table tr:nth-child(even) {
     background-color: var(--dark-bg-col);
+}
+
+tbody tr:hover {
+    opacity: 0.6;
+    background-color: var(--main-purple);
+    cursor: pointer;
 }
