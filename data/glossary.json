@@ -1,0 +1,15 @@
+{
+    "glossary": {
+        "title": "英和用語解説",
+		"entries": [
+            {
+                "jp": [ "コード" ],
+                "en": [ "code", "to code" ]
+            },
+            {
+                "jp": [ "抽出", "抽出化する" ],
+                "en": [ "abstraction", "to abstract" ]
+            }
+        ]
+    }
+}

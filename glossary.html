@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/glossary.css">
+    <link rel="stylesheet" type="text/css" href="styles/loader.css">
     <title>Fランエンジニア</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2083037220622778"
     crossorigin="anonymous"></script>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="scripts/glossary.js"></script>
 </head>
 <body>
     <header>
@@ -22,11 +25,56 @@
         </nav>
     </header>
 
+    <main>
+        <section class="search-section">
+            <h2>英和用語解説</h2>
+            <p>このページはプログラミング用語の英和辞典です<br>
+                検索タームを下記のバーに入力してください</p>
+            <fieldset>
+                <label for="searchBar">検索</label>
+                <input type="text" name="searchBar" id="searchBar" aria-label="serachBar">
+                <input type="button" value="Search" id="searchButton">
+            </fieldset>
+        </section>
+
+        <section class="glossary-entries">
+            <table>
+                <thead>
+                    <tr>
+                        <td>日本語</td>
+                        <td>英語</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>コード</td>
+                        <td>code</td>
+                    </tr>
+                    <tr>
+                        <td>コード</td>
+                        <td>code</td>
+                    </tr>
+                    <tr>
+                        <td>コード</td>
+                        <td>code</td>
+                    </tr>
+                    <tr>
+                        <td>コード</td>
+                        <td>code</td>
+                    </tr>
+                    <tr>
+                        <td>コード</td>
+                        <td>code</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
     <footer>
         <p >Fランエンジニア <img class="circle-icon inline" loading="lazy" style="float: inline-start; margin-right: 4px;"  width="50" height="50" src="img/pfp.png" alt="Fランエンジニアの画像"></p>
         <a href="#">トップへ戻る</a>
     </footer>
    
-     <script src="scripts/glossary.js"></script>
 </body>
 </html>
