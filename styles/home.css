@@ -1,0 +1,41 @@
+main :nth-child(2) {
+    background-color: var(--dark-bg-col);
+}
+
+h2 {
+    margin-bottom: 0.5vw;
+}
+
+article {
+    width: 100%;
+
+    text-align: center;
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+article section {
+    width: var(--main-content-width);
+    margin: auto;
+
+    box-shadow: var(--box-shadow);
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 0.5vw;
+
+    margin-bottom: 2vw;
+}
+
+
+.video-description {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align:justify;    
+}
+
+.twitter-timeline {
+    margin: auto;
+
+}
