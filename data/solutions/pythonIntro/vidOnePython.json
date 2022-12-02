@@ -1,0 +1,12 @@
+{
+    "solutions": [
+        { 
+            "title": "Printステートメント",
+            "code": [
+                "print(\"helloworld\")",
+                "def deez_nuts(param):",
+                "   print(\"hello!\")"
+            ]
+        }
+    ]
+}

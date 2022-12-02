@@ -1,0 +1,16 @@
+{
+    "solutions": [
+        { 
+            "title": "テーブルのような出力",
+            "code": [
+                "print(\"\\t\")"
+            ]
+        },
+        { 
+            "title": "制御文字",
+            "code": [
+                "print(\"print\\r\")"
+            ]
+        }
+    ]
+}

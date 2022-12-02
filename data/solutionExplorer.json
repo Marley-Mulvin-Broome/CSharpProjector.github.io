@@ -1,0 +1,16 @@
+{
+    "explorer": {
+        "rootDir": "../data/solutions",
+        "root": [
+           {
+                "type": "folder",
+                "path": "pythonIntro",
+                "name": "Python入門編",
+                "contents": [
+                    { "type": "file", "path": "vidOnePython.json", "name": "#1" },
+                    { "type": "file", "path": "vidTwoPython.json", "name": "#2" }
+                ]
+            }
+        ]
+    }
+}

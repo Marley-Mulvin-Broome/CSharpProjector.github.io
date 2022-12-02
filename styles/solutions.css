@@ -1,0 +1,25 @@
+header {
+    margin-bottom: 1vw;
+}
+
+h2, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+section {
+    width: var(--main-content-width);
+    margin: auto;
+
+    box-shadow: var(--box-shadow);
+
+    text-align: center;
+
+    margin-top: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+section p {
+    font-size: 1.3rem;
+}

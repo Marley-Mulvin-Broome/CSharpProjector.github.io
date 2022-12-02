@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+
+.solution-explorer {
+    background-color: var(--dark-bg-col);
+}
+
+.solution-explorer-list, .solution-list {
+    list-style: none;
+    padding: 0;
+}
+
+.solution-explorer-item {
+    border-radius: 4px;
+    background-color: var(--main-bg-col);
+
+    width: 80%;
+    margin: auto;
+
+    margin-bottom: 0.5vw;
+
+    padding: 0.5vw;
+
+    box-shadow: var(--box-shadow);
+
+}
+
+.category:hover {
+    cursor: pointer;
+
+    width: 85%;
+}
+
+.solution-explorer-item h3 {
+    margin: 0;
+}
+
+.solution-explorer-controls {
+    display: flex;
+
+    align-items: center;
+    margin: auto;
+
+    width: 80%;
+}
+
+.solution-explorer-back {
+    background-color: var(--dark-bg-col);
+
+    box-shadow: var(--box-shadow);
+
+    border: none;
+
+    width: 20%;
+
+    margin-left: 0;
+    margin-bottom: 0.5vw;
+    margin-right: 0.5vw;
+
+    margin-top: auto;
+
+    padding: 0.8vw;
+
+    font-size: 1.3rem;
+}
+
+#solutionExplorerDirectory {
+    font-size: 1.5rem;
+
+    margin-bottom: 0.5vw;
+
+    text-decoration: underline 1px;
+}
+
+#solutionExplorerDirectory:hover {
+    cursor: pointer;
+}
+
+.solution-explorer-back:hover, .solution input:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.solution h3 {
+    display: inline-block;
+
+    width: fit-content;
+}
+
+.solution input {
+    float: right;
+
+    background-color: var(--dark-bg-col);
+    border: none;
+    border-radius: 4px;
+
+    padding: 0.5vw;
+    margin-top: 1vw;
+    margin-right: 5%;
+}
+
+.solution-container {
+    width: 90%;
+    
+    margin: auto;
+    margin-bottom: 0.5vw;
+    line-height: 10px;
+
+
+}
+
+.solution-list {
+    text-align: left;
+
+    border: solid 2px hsla(0, 0%, 100%, 0.139);
+    border-radius: 4px;
+}
+
+.solution-list h4 {
+    text-align: center;
+    margin: 0;
+
+    line-height: 150%;
+
+    border-bottom: solid 2px hsla(0, 0%, 100%, 0.139);
+}
+
+.solution-code {
+
+    
+    padding-bottom: 0.5vw;
+    letter-spacing: -0.05em;
+    line-height: 100%;
+    word-break: normal;
+
+    font-size: 1rem;
+}
+
+.code-container {
+    background-color: var(--dark-bg-col);
+
+    border-radius: 4px;
+    padding-left: 0.5vw;
+
+}
+
+pre > code {
+    font-family: 'Ubuntu Mono', monospace;
+
+    white-space: pre-wrap;
+}
+
+pre > code::selection, pre > code span::selection {
+    background: hsl(221, 14%, 23%);
+}
+
+pre > code > span {
+    font-family: 'Ubuntu Mono', monospace;
+}

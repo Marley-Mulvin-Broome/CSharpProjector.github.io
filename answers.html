@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Fランエンジニアのプログラミング動画の解答編。ここですべての動画の問題に解答がある。">
@@ -7,14 +7,24 @@
     <meta name="author" content="Fランエンジニア">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/main.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/solutions.css">
+    <link rel="stylesheet" type="text/css" href="styles/solutionExplorer.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2083037220622778"
+    crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/syntaxHighlighting.css">
+    <script>hljs.highlightAll();</script>
     <title>Fランエンジニア</title>
 </head>
 <body>
     <header>
         <h1>Fランエンジニア</h1>
-        <nav class="navbar">
+        <nav class="navbar not-selectable">
             <a href="index.html">ホーム</a>
             <a href="glossary.html">英和用語解説</a>
             <a class="active" href="answers.html">動画の解答編</a>
@@ -22,9 +32,58 @@
         </nav>
     </header>
 
+    <main>
+        <section>
+            <h2>解答編</h2>
+            <p>ここには動画の解答があります</p>
+        </section>
+
+        <section class="solution-explorer">
+            <h2 id="solution-explorer-heading">カテゴリー</h2>
+            <div class="solution-explorer-controls">
+                <input class="solution-explorer-back" type="button" value="戻る">
+                <a id="solutionExplorerDirectory">directory/</a>
+            </div>
+            
+            <!--
+            <ul class="solution-explorer-list">
+                <li class="solution-explorer-item category not-selectable">
+                    <h3>Python入門編</h3>
+                </li>
+                <li class="solution-explorer-item category not-selectable">
+                    <h3>C入門編</h3>
+                </li>
+                <li class="solution-explorer-item category not-selectable">
+                    <h3>そのほか</h3>
+                </li>
+                <li class="solution-explorer-item solution">
+                    <h3>#1 Print文</h3>
+                    <input type="button" value="たたむ">
+                    <ul class="solution-container">
+                        <li class="solution-list">
+                            <h4>テーブルみたいな出力</h4>
+                            <div class="code-container">
+                                <pre>
+                                    <code class="solution-code language-python">
+                                    </code></pre>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        -->
+        </section>
+    </main>
+
     <footer>
         <p >Fランエンジニア <img loading="lazy" class="circle-icon inline" style="float: inline-start; margin-right: 4px;"  width="50" height="50" src="img/pfp.png" alt="Fランエンジニアの画像"></p>
         <a href="#">トップへ戻る</a>
     </footer>
+    <!--
+       
+    <script type="module" src="scripts/solutionExplorer.js"></script>
+    <script type="module" src="scripts/solutions.js"></script> 
+    -->
 </body>
 </html>

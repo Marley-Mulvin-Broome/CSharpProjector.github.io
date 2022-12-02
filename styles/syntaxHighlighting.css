@@ -1,0 +1,28 @@
+.hljs-built_in {
+    color: #67d2e0;
+}
+
+.hljs-string {
+    color: #90c378;
+}
+
+.hljs-keyword {
+    color: #c679dd;
+}
+
+.hljs-number, .hljs-literal {
+    color: #d2945d;
+}
+
+.hljs-comment, .hljs-doctag {
+    color: #59626f;
+    font-style: italic;
+}
+
+.hljs-params, .inherited__ {
+    color: #90c378;
+}
+
+.function_ {
+    color: #61aeef;
+}

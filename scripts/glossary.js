@@ -64,6 +64,16 @@ const loadGlossary = (json) => {
 
 }
 
+const entryMatchesSearch = (entry, term) => {
+    for (let i in entry) {
+        if (entry[i].includes(term)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 const search = (table, glossTerms, searchTerm) => {
     if (table === null) {
         return;
@@ -72,7 +82,7 @@ const search = (table, glossTerms, searchTerm) => {
     let newBody = $('<tbody>');
 
     for (let i in glossTerms) {
-        if (!(glossTerms[i].jp.includes(searchTerm) || glossTerms[i].en.includes(searchTerm)) && searchTerm != '') {
+        if (!(entryMatchesSearch(glossTerms[i].jp, searchTerm) || entryMatchesSearch(glossTerms[i].en, searchTerm)) && searchTerm != '') {
             continue;
         }
 
